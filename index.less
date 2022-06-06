@@ -21,12 +21,6 @@
   }
 }
 
-html,
-body,
-button {
-  font-family: ".SF Symbols Fallback", sans-serif;
-}
-
 body {
   background-image: unset !important;
 }
@@ -71,26 +65,8 @@ input {
   }
 }
 
-.playlist-controls .md-btn:nth-of-type(1) {
-  &:before {
-    content: "\10D971";
-    padding-right: 6px;
-  }
-
-  img {
-    display: none;
-  }
-}
-
-.playlist-controls .md-btn:nth-of-type(2) {
-  &:before {
-    content: "\10D9B4";
-    padding-right: 6px;
-  }
-
-  img {
-    display: none;
-  }
+svg.feather {
+  filter: var(--filter);
 }
 
 .md-btn:not(.md-btn-replay),
@@ -264,23 +240,6 @@ input {
     filter: invert(1);
   }
 
-  .playback-button--small {
-    &.shuffle {
-      background-image: none;
-
-      &:after {
-        content: "\10D9B4";
-      }
-    }
-    &.repeat {
-      background-image: none;
-
-      &:after {
-        content: "\10029E";
-      }
-    }
-  }
-
   // #window-controls-container {
   //   filter: invert(1);
   //   .close:hover{
@@ -383,132 +342,10 @@ input {
 .more-btn-round {
   background: var(--bg2);
   box-shadow: none;
-
-  .svg-icon {
-    background: var(--contrast);
-    display: none;
-  }
-
-  &:after {
-    content: "\10DBAF";
-    color: var(--contrast);
-  }
-}
-
-.sidebar-icon {
-  width: 22px;
-  margin-right: 4px;
-  text-align: center;
-}
-
-.sidebar-playlist .sidebar-icon {
-  svg {
-    visibility: hidden;
-  }
-
-  &:before {
-    content: "\10046C";
-    color: var(--contrast);
-  }
 }
 
 .top-nav-group {
   border: none !important;
-
-  .app-sidebar-item:nth-child(1) .sidebar-icon {
-    svg {
-      visibility: hidden;
-    }
-
-    &:before {
-      visibility: visible;
-      content: "\1004BD";
-      color: var(--contrast);
-    }
-  }
-  .app-sidebar-item:nth-child(2) .sidebar-icon {
-    svg {
-      visibility: hidden;
-    }
-
-    &:before {
-      visibility: visible;
-      content: "\100296";
-      color: var(--contrast);
-    }
-  }
-  .app-sidebar-item:nth-child(3) .sidebar-icon {
-    svg {
-      visibility: hidden;
-    }
-
-    &:before {
-      visibility: visible;
-      content: "\100688";
-      color: var(--contrast);
-    }
-  }
-  .app-sidebar-item:nth-child(4) .sidebar-icon {
-    svg {
-      visibility: hidden;
-    }
-
-    &:before {
-      visibility: visible;
-      content: "\100319";
-      color: var(--contrast);
-    }
-  }
-}
-
-.app-sidebar-content {
-  .app-sidebar-item:nth-of-type(2) .sidebar-icon {
-    svg {
-      visibility: hidden;
-    }
-
-    &:before {
-      visibility: visible;
-      content: "\10046A";
-      color: var(--contrast);
-    }
-  }
-
-  .app-sidebar-item:nth-of-type(3) .sidebar-icon {
-    svg {
-      visibility: hidden;
-    }
-
-    &:before {
-      visibility: visible;
-      content: "\10040B";
-      color: var(--contrast);
-    }
-  }
-
-  .app-sidebar-item:nth-of-type(4) .sidebar-icon {
-    svg {
-      visibility: hidden;
-    }
-
-    &:before {
-      visibility: visible;
-      content: "\10046B";
-      color: var(--contrast);
-    }
-  }
-
-  .app-sidebar-item:nth-of-type(5) .sidebar-icon {
-    svg {
-      visibility: hidden;
-    }
-
-    &:before {
-      visibility: visible;
-      content: "\1003B5";
-      color: var(--contrast);
-    }
-  }
 }
 
 .cd-mediaitem-square.mediaitem-card .info-rect-card {
@@ -810,33 +647,6 @@ body .app-chrome .app-chrome-item>.window-controls>div.close {
       .md-select {
         color: var(--contrast);
 
-        &:not(.md-btn-primary) {
-          background: transparent;
-          color: transparent;
-          border: none;
-          visibility: hidden;
-          padding-left: 4px;
-
-          &:before {
-            content: "\10DEE4";
-            background: var(--bg2);
-            padding-top: 8px;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            visibility: visible;
-            color: var(--contrast);
-          }
-        }
-
-        .md-ico-remove {
-          filter: unset;
-        }
-
-        .md-ico-add {
-          filter: unset;
-        }
-
         >option,
         >optgroup,
         optgroup>option {
@@ -943,7 +753,6 @@ body .app-chrome .app-chrome-item>.window-controls>div.close {
 
 
   .search-input {
-    background: var(--bg2);
     border: none;
     height: 100%;
     color: white;
@@ -956,24 +765,6 @@ body .app-chrome .app-chrome-item>.window-controls>div.close {
     &:focus {
       border: none;
     }
-  }
-
-  .search-input-container {
-    height: 32px;
-
-    &:before {
-      content: "\10DA3E";
-      color: #515156;
-      position: absolute;
-      font-size: 22px;
-      z-index: 2;
-      left: 5px;
-      top: 3px;
-    }
-  }
-
-  .search-input--icon {
-    display: none;
   }
 
   .search-hints-container .search-hints {
